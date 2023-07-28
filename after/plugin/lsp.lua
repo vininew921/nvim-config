@@ -69,3 +69,4 @@ vim.diagnostic.config({
 })
 
 require("fidget").setup()
+require("autoclose").setup()

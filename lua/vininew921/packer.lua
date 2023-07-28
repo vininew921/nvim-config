@@ -31,6 +31,7 @@ return require('packer').startup(function(use)
     use('akinsho/toggleterm.nvim')
     use('nvim-lua/lsp-status.nvim')
     use('windwp/nvim-ts-autotag')
+    use('m4xshen/autoclose.nvim')
 
     use(
         {
