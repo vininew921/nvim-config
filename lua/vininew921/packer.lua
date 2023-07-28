@@ -32,6 +32,7 @@ return require('packer').startup(function(use)
     use('nvim-lua/lsp-status.nvim')
     use('windwp/nvim-ts-autotag')
     use('m4xshen/autoclose.nvim')
+    use('ray-x/lsp_signature.nvim')
 
     use(
         {

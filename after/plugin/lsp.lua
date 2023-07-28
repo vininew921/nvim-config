@@ -70,3 +70,4 @@ vim.diagnostic.config({
 
 require("fidget").setup()
 require("autoclose").setup()
+require("lsp_signature").setup()
