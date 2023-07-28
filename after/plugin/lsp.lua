@@ -5,7 +5,7 @@ lsp.preset("recommended")
 lsp.ensure_installed({
     'tsserver',
     'rust_analyzer',
-    'omnisharp',
+    'csharp_ls',
     'clangd',
     'cssls',
     'azure_pipelines_ls',
