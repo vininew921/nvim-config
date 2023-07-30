@@ -1,0 +1,34 @@
+" Set mapleader to space
+let g:mapleader = " "
+
+" Visual mode mappings
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+" Normal mode mappings
+nnoremap J mzJ`z
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" Copy and paste mappings
+nnoremap <leader>p "_dP
+
+" Copy to clipboard mappings
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+nnoremap <leader>Y "+Y
+
+" Delete mappings
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+
+" Disable Ex mode
+nnoremap Q <nop>
+
+" Quickfix and location list mappings
+nnoremap <C-k> :cnext<CR>zz
+nnoremap <C-j> :cprev<CR>zz
+nnoremap <leader>k :lnext<CR>zz
+nnoremap <leader>j :lprev<CR>zz
