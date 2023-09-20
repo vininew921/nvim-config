@@ -26,17 +26,13 @@ return require('packer').startup(function(use)
     use('m4xshen/autoclose.nvim')
     use('ray-x/lsp_signature.nvim')
 
-    use(
-        {
-            'rose-pine/neovim',
-            as = 'rose-pine'
-        }
-    )
+    --Themes
+    use({ 'rose-pine/neovim', as = 'rose-pine' })
+    use({ 'folke/tokyonight.nvim', as = 'tokyonight' })
+    use({ 'bluz71/vim-moonfly-colors', as = 'moonfly' })
+    use({ 'shatur/neovim-ayu', as = 'ayu' })
 
-    use {
-        'j-hui/fidget.nvim',
-        tag = 'legacy'
-    }
+    use { 'j-hui/fidget.nvim',tag = 'legacy' }
 
     use {
         'VonHeikemen/lsp-zero.nvim',
