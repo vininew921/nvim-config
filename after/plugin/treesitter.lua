@@ -12,6 +12,9 @@ require 'nvim-treesitter.configs'.setup {
         "c_sharp",
         "svelte",
         "vue",
+        "vim",
+        "sql",
+        "go",
     },
 
     -- Install parsers synchronously (only applied to `ensure_installed`)

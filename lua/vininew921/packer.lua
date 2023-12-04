@@ -12,7 +12,7 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-     use {
+    use {
         'nvim-treesitter/nvim-treesitter',
         run = function()
             local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
@@ -38,8 +38,8 @@ return require('packer').startup(function(use)
     use({ 'folke/tokyonight.nvim', as = 'tokyonight' })
     use({ 'bluz71/vim-moonfly-colors', as = 'moonfly' })
     use({ 'shatur/neovim-ayu', as = 'ayu' })
+    use { 'j-hui/fidget.nvim', tag = 'legacy' }
 
-    use { 'j-hui/fidget.nvim',tag = 'legacy' }
 
     use {
         'VonHeikemen/lsp-zero.nvim',
@@ -61,4 +61,6 @@ return require('packer').startup(function(use)
             { 'L3MON4D3/LuaSnip' },     -- Required
         }
     }
+
+    use { 'codota/tabnine-nvim', run = "powershell.exe -file .\\dl_binaries.ps1" }
 end)
