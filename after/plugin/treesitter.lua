@@ -23,10 +23,6 @@ require 'nvim-treesitter.configs'.setup {
     -- Automatically install missing parsers when entering buffer
     auto_install = true,
 
-    autotag = {
-        enable = true,
-    },
-
     highlight = {
         enable = true,
 
@@ -37,3 +33,5 @@ require 'nvim-treesitter.configs'.setup {
         additional_vim_regex_highlighting = false,
     },
 }
+
+require('nvim-ts-autotag').setup()
