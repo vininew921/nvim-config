@@ -1,27 +1,36 @@
 local lsp = require("lsp-zero")
 
-lsp.preset("recommended")
+require("mason").setup({})
 
-lsp.ensure_installed({
-    'azure_pipelines_ls',
-    'clangd',
-    'cssls',
-    'dockerls',
-    'html',
-    'lua_ls',
-    'omnisharp',
-    'powershell_es',
-    'pylsp',
-    'rust_analyzer',
-    'svelte',
-    'tailwindcss',
-    'tsserver',
+require("mason-lspconfig").setup({
+    ensure_installed = {
+        'azure_pipelines_ls',
+        'clangd',
+        'cssls',
+        'dockerls',
+        'html',
+        'lua_ls',
+        'omnisharp',
+        'powershell_es',
+        'pylsp',
+        'rust_analyzer',
+        'svelte',
+        'tailwindcss',
+        'tsserver',
+    },
+    handlers = {
+        lsp.default_setup,
+        lua_ls = function()
+            local lua_opts = lsp.nvim_lua_ls()
+            require("lspconfig").lua_ls.setup(lua_opts)
+        end,
+    }
 })
 
--- Fix Undefined global 'vim'
-lsp.nvim_workspace()
 
 local cmp = require('cmp')
+local cmp_format = lsp.cmp_format()
+
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
     ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
@@ -32,8 +41,9 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 
 cmp_mappings['<S-Tab>'] = nil
 
-lsp.setup_nvim_cmp({
-    mapping = cmp_mappings
+cmp.setup({
+    formatting = cmp_format,
+    mapping = cmp_mappings,
 })
 
 lsp.set_preferences({
