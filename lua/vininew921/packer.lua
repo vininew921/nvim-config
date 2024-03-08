@@ -32,6 +32,7 @@ return require('packer').startup(function(use)
     use('windwp/nvim-ts-autotag')
     use('m4xshen/autoclose.nvim')
     use('ray-x/lsp_signature.nvim')
+    use('laytan/cloak.nvim')
 
     --Themes
     use({ 'rose-pine/neovim', as = 'rose-pine' })
