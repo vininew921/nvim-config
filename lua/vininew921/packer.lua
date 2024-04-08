@@ -54,8 +54,17 @@ return require('packer').startup(function(use)
             { 'hrsh7th/nvim-cmp' },
             { 'hrsh7th/cmp-nvim-lsp' },
             { 'L3MON4D3/LuaSnip' },
+            { 'rafamadriz/friendly-snippets' },
         }
     }
 
-    use { 'codota/tabnine-nvim', run = "powershell.exe -file .\\dl_binaries.ps1" }
+    local function tabnine_build_path()
+        if vim.loop.os_uname().sysname == "Windows_NT" then
+            return "powershell.exe -file .\\dl_binaries.ps1"
+        else
+            return "./dl_binaries.sh"
+        end
+    end
+
+    use { 'codota/tabnine-nvim', run = tabnine_build_path() }
 end)

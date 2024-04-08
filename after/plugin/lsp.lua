@@ -44,6 +44,10 @@ cmp_mappings['<S-Tab>'] = nil
 cmp.setup({
     formatting = cmp_format,
     mapping = cmp_mappings,
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+    }
 })
 
 lsp.set_preferences({
@@ -82,3 +86,4 @@ vim.diagnostic.config({
 require("fidget").setup()
 require("autoclose").setup()
 require("lsp_signature").setup()
+require("luasnip.loaders.from_vscode").load()
