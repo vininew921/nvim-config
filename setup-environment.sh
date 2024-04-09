@@ -25,7 +25,7 @@ pacman -Syu --noconfirm
 
 # Install language sdks and runtimes
 echo -e "\n${PURPLE}Installing language SDKs and runtimes${NC}"
-pacman -S --noconfirm nodejs npm dotnet-sdk-6.0 dotnet sdk-8.0
+pacman -S --noconfirm nodejs npm dotnet-sdk-6.0 dotnet-sdk-8.0
 
 # Install utils
 echo -e "\n${PURPLE}Installing unzip${NC}"
