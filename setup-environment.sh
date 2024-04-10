@@ -31,14 +31,14 @@ pacman -S --noconfirm nodejs npm dotnet-sdk-6.0 dotnet-sdk-8.0
 echo -e "\n${PURPLE}Installing unzip${NC}"
 pacman -S --noconfirm git unzip 
 
-# Install nvim
+# Install nvim and configure everything
 echo -e "\n${PURPLE}Installing neovim${NC}"
 pacman -S --noconfirm neovim
-
-# Install packer
-echo -e "\n${PURPLE}Setting up neovim environment${NC}"
 git clone --depth 1 https://github.com/wbthomason/packer.nvim $USER_HOME/.local/share/nvim/site/pack/packer/start/packer.nvim
-cp -r ./nvim/* $USER_HOME/.config/nvim
+cp -r ./after $USER_HOME/.config/nvim
+cp -r ./lua $USER_HOME/.config/nvim
+cp -r ./plugin $USER_HOME/.config/nvim
+cp ./init.lua $USER_HOME/.config/nvim
 
 # Setup dotnet
 echo -e "\n${PURPLE}Setting up .NET workloads and tools${NC}"
