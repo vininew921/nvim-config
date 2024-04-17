@@ -20,6 +20,7 @@ return require('packer').startup(function(use)
         end,
     }
 
+
     use('nvim-treesitter/playground', { run = ':TSUpdate' })
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
@@ -32,6 +33,9 @@ return require('packer').startup(function(use)
     use('m4xshen/autoclose.nvim')
     use('ray-x/lsp_signature.nvim')
     use('laytan/cloak.nvim')
+    use('folke/zen-mode.nvim')
+    use('folke/trouble.nvim')
+
 
     --Themes
     use({ 'rose-pine/neovim', as = 'rose-pine' })
