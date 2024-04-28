@@ -64,14 +64,4 @@ return require('packer').startup(function(use)
             { 'rafamadriz/friendly-snippets' },
         }
     }
-
-    local function tabnine_build_path()
-        if vim.loop.os_uname().sysname == "Windows_NT" then
-            return "powershell.exe -file .\\dl_binaries.ps1"
-        else
-            return "./dl_binaries.sh"
-        end
-    end
-
-    use { 'codota/tabnine-nvim', run = tabnine_build_path() }
 end)
