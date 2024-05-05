@@ -45,8 +45,8 @@ return require('packer').startup(function(use)
     use({ 'folke/tokyonight.nvim', as = 'tokyonight' })
     use({ 'bluz71/vim-moonfly-colors', as = 'moonfly' })
     use({ 'shatur/neovim-ayu', as = 'ayu' })
-    use { 'j-hui/fidget.nvim', tag = 'legacy' }
-
+    use({ 'j-hui/fidget.nvim', tag = 'legacy' })
+    use({ 'ellisonleao/gruvbox.nvim', as = 'gruvbox' })
 
     use {
         'VonHeikemen/lsp-zero.nvim',
