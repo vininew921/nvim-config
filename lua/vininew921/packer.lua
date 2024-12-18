@@ -38,6 +38,7 @@ return require('packer').startup(function(use)
     use('ray-x/lsp_signature.nvim')
     use('laytan/cloak.nvim')
     use('folke/zen-mode.nvim')
+    use('S1M0N38/love2d.nvim')
 
 
     --Themes

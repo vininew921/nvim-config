@@ -16,7 +16,7 @@ require("mason-lspconfig").setup({
         'rust_analyzer',
         'svelte',
         'tailwindcss',
-        'tsserver',
+        'ts_ls',
     },
     handlers = {
         lsp.default_setup,
@@ -87,3 +87,4 @@ require("fidget").setup()
 require("autoclose").setup()
 require("lsp_signature").setup()
 require("luasnip.loaders.from_vscode").load()
+require("love2d").setup()
